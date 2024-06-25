@@ -9,7 +9,7 @@ export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () =>
-      import('@app/Components/form/form.component').then(
+      import('@app/form/form.component').then(
         (c) => c.FormComponent
       ),
   },

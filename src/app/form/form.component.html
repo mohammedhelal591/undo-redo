@@ -1,0 +1,20 @@
+<div class="container p-5">
+    <div class="row">
+        <form [formGroup]="myForm" class="d-flex flex-column gap-1">
+            <mat-form-field>
+                <input matInput formControlName="name" placeholder="Name">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput formControlName="email" placeholder="Email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput formControlName="age" placeholder="Age" type="number">
+            </mat-form-field>
+            <mat-checkbox formControlName="subscribe">Subscribe</mat-checkbox>
+            <div>
+                <button mat-raised-button color="primary" (click)="undo()" [disabled]="!canUndo()">Undo</button>
+                <button mat-raised-button color="accent" (click)="redo()" [disabled]="!canRedo()">Redo</button>
+            </div>
+        </form>
+    </div>
+</div>
